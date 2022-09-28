@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Sleep Predictor</title>
+  <link rel="icon" href="/media/moon.png" type="image/png" sizes="16x16">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container sleepcalculator">
+
+  <div class="row">
+    <div class="col-md-5">
+
+      <div class="wake-up">
+
+        <h4>Predicted Sleep Time</h4>
+
+        <p class="small">Select the time you woke up.</p>
+        
+        <input data-customClass="form-control" type="text" id="sleepcalc" data-format="h:mm" data-template="hh : mm" name="datetime" value="6:30">
+        AM
+        
+        
+      </div>
+      <br>
+      <small>This tool is designed to predict what time you're going to be able to sleep more easily.</small>
+      <br><br>
+      <small>Humans typically cannot complete another few cycles of sleep for approximately 16 hours relative to their circadian rhythm.</small>
+    </div>
+
+    <div class="col-md-6">
+
+      <h4>Predicted Timings:</h4>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h3 id="result1" class="resulttime animated"></h3>
+          <p>First Window - Earliest Possible Time<br></br><small>This is the predicted time when you <b>begin</b> to feel tired.</small></p>
+        </div>
+
+        <div class="col-md-12">
+          <h3 id="result2" class="resulttime"></h3>
+          <p>Second Window - Most Recommended Time<br></br><small>This is the best time we suggest for a good sleep cycle pattern.</small>
+          </p>
+        </div>
+
+        <div class="col-md-12">
+          <h3 id="result3" class="resulttime"></h3>
+          <p>Final Window - Latest Possible Time<br></br><small>This is the predicted time where humans will feel <b>most</b> tired.</small></p>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+<button onclick="back()" id="back">BACK</button>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script src='https://vitalets.github.io/combodate/momentjs/moment.min.2.5.0.js'></script>
+<script src='https://vitalets.github.io/combodate/combodate.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+
+
+
+<style>
+  #back:hover {
+  letter-spacing: 0.5em;
+  background-color: #F08C99;
+}
+
+#back {
+  color: white;
+}
+button {
+  height: 4em;
+  width: 10%;
+  padding: 1.5em auto;
+  margin: 1em auto;
+  background-color: #FEB1C0;
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+ 
+}
+
+button:focus {
+  outline: none;
+}
+
+</style>
+
+<script>
+  function back() {
+    window.location.href = "/select.html";
+  }
+</script>
