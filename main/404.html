@@ -1,6 +1,6 @@
 <head>
     <title>404</title>
-    <link rel="icon" href="media/moon.png" type="image/png" sizes="16x16">
+    <link rel="icon" href="media/bedCalc.png" type="image/png" sizes="16x16">
 </head>
 
 <svg id="yetiSVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 470">
@@ -212,7 +212,7 @@
 </div>
 
 <div class="content2">
-	<h3 id="cd">Returning Home In: 5</h3>
+	<h3 id="cd">Returning Home In: 10</h3>
 </div>
 
 <style>
@@ -275,22 +275,13 @@
 </style>
 
 <script>
-    setTimeout(function(){
-        document.getElementById("cd").textContent="Returning Home In: 4";
-    },1000)
-    setTimeout(function(){
-        document.getElementById("cd").textContent="Returning Home In: 3";
-    },2000)
-    setTimeout(function(){
-        document.getElementById("cd").textContent="Returning Home In: 2";
-    },3000)
-    setTimeout(function(){
-        document.getElementById("cd").textContent="Returning Home In: 1";
-    },4000)
-    setTimeout(function(){
-        document.getElementById("cd").textContent="Returning Home In: 0";
-    },5000)
+	for (let i = 0; i < 10; i++) {
+		setTimeout(function(){
+			document.getElementById("cd").textContent="Returning Home In: "+(10-i);
+		},i*1000)
+	}
+    
     setTimeout(function(){
         window.location.href = "/select";
-    },5750)
+    },10000)
 </script>

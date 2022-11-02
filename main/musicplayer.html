@@ -1,12 +1,25 @@
+<!-- 
+
+
+    CHANGE TITLE ON SONG CHANGE TO HELP WITH PHONE USERS
+
+
+-->
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Relaxing Music</title>
-    <link rel="icon" href="media/moon.png" type="image/png" sizes="16x16">
+    <title>BedCalculator Playlist</title>
+    <link rel="icon" href="media/bedCalc.png" type="image/png" sizes="16x16">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTML Music Player</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,10 +39,13 @@
                     <!-- THIS IS FOR THE CURRENTLY PLAYING ICON ---- BELOW IS FOR THE LIST ICONS -->
 
 
+                    <img class="img slider__img" src="https://i.imgur.com/wZMcpr8.png" alt="cover">
                     <img class="img slider__img" src="https://c0.wallpaperflare.com/preview/462/274/335/japan-forest-square-wallpaper.jpg" alt="cover">
                     <img class="img slider__img" src="https://img.freepik.com/free-photo/american-law-concept-with-judge-gavel-white-background_185193-51871.jpg" alt="cover">
                     <img class="img slider__img" src="https://secure.img1-fg.wfcdn.com/im/12434696/resize-h600-w600%5Ecompr-r85/1198/119884912/Daria+Square+Pillow+Insert.jpg" alt="cover">
-                    <img class="img slider__img" src="https://i.imgur.com/wZMcpr8.png" alt="cover">
+                    <img class="img slider__img" src="https://i.pinimg.com/736x/77/99/e5/7799e538b4ae71a9f58e680a1ccb1ae8.jpg" alt="cover">
+                    <img class="img slider__img" src="https://c1.wallpaperflare.com/preview/297/504/842/bulb-close-up-dark-electric.jpg" alt="cover">
+                    <img class="img slider__img" src="https://static.nationalgeographic.co.uk/files/styles/image_3200/public/0101-cassini-gallery-crash.jpg?w=1900&h=1900" alt="cover">
                 </div>
             </div>
 
@@ -41,7 +57,7 @@
                 </button>
                 <p class="player__context slider__context">
                     <strong class="slider__name"></strong>
-                    <span class="player__title slider__title"></span>
+                    <span id="SONG_NAME" class="player__title slider__title"></span>
                 </p>
                 <button class="player__button next">
                     <img class="img" src="http://physical-authority.surge.sh/imgs/icon/next.svg" alt="next-icon">
@@ -58,11 +74,22 @@
         
         <ul class="player__playlist list">
             <li class="player__song">
+                <img class="player__img img" src="https://i.imgur.com/wZMcpr8.png" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">White Noise</b>
+                    <span class="flex">
+                        <span class="player__title">BC Suggested</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="audio/white-noise-801935.mp3"></audio>
+            </li>
+            <li class="player__song">
                 <img class="player__img img" src="https://c0.wallpaperflare.com/preview/462/274/335/japan-forest-square-wallpaper.jpg" title="cover">
                 <p class="player__context">
                     <b class="player__song-name">Forest Lullaby</b>
                     <span class="flex">
-                        <span class="player__title">Royalty Free</span>
+                        <span class="player__title">BC Suggested</span>
                         <span class="player__song-time"></span>
                     </span>
                 </p>
@@ -73,7 +100,7 @@
                 <p class="player__context">
                     <b class="player__song-name">Order</b>
                     <span class="flex">
-                        <span class="player__title">Royalty Free</span>
+                        <span class="player__title">BC Suggested</span>
                         <span class="player__song-time"></span>
                     </span>
                 </p>
@@ -84,22 +111,44 @@
                 <p class="player__context">
                     <b class="player__song-name">Sedative</b>
                     <span class="flex">
-                        <span class="player__title">Royalty Free</span>
+                        <span class="player__title">BC Suggested</span>
                         <span class="player__song-time"></span>
                     </span>
                 </p>
                 <audio class="audio" src="audio/sedative-110241.mp3"></audio>
             </li>
             <li class="player__song">
-                <img class="player__img img" src="https://i.imgur.com/wZMcpr8.png" alt="cover">
+                <img class="player__img img" src="https://i.pinimg.com/736x/77/99/e5/7799e538b4ae71a9f58e680a1ccb1ae8.jpg" alt="cover">
                 <p class="player__context">
-                    <b class="player__song-name">White Noise</b>
+                    <b class="player__song-name">To Build A Home</b>
                     <span class="flex">
-                        <span class="player__title">Royalty Free</span>
+                        <span class="player__title">The Cinematic Orchestra</span>
                         <span class="player__song-time"></span>
                     </span>
                 </p>
-                <audio class="audio" src="audio/white-noise-801935.mp3"></audio>
+                <audio class="audio" src="audio/TBAH-57285.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://c1.wallpaperflare.com/preview/297/504/842/bulb-close-up-dark-electric.jpg" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">Light</b>
+                    <span class="flex">
+                        <span class="player__title">Sleeping At Last</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="audio/light-28562.mp3"></audio>
+            </li>
+            <li class="player__song">
+                <img class="player__img img" src="https://static.nationalgeographic.co.uk/files/styles/image_3200/public/0101-cassini-gallery-crash.jpg?w=1900&h=1900" alt="cover">
+                <p class="player__context">
+                    <b class="player__song-name">Saturn</b>
+                    <span class="flex">
+                        <span class="player__title">Sleeping At Last</span>
+                        <span class="player__song-time"></span>
+                    </span>
+                </p>
+                <audio class="audio" src="audio/saturn-83265.mp3"></audio>
             </li>
         </ul>
     </div>
@@ -172,7 +221,7 @@ body{
     user-select: none ;
     align-items: center ;
     justify-content: center ;
-    background-color: #282730 ;
+    background-image: linear-gradient(90deg,#1c2026, #2b1f2a);
     font-family: 'Quicksand', sans-serif ;
     -webkit-tap-highlight-color: transparent ;
     transition: background-color  var(--cubic-slider) ;
@@ -545,15 +594,17 @@ run();
 }
 
 function changeSliderContext() {
-sliderContext.style.animationName = "opacity";    
+sliderContext.style.animationName = "opacity";
 sliderName.textContent = playerPlayList[count].querySelector(".player__title").textContent;
-sliderTitle.textContent = playerPlayList[count].querySelector(".player__song-name").textContent;    
+sliderTitle.textContent = playerPlayList[count].querySelector(".player__song-name").textContent;
+document.title = sliderTitle.textContent + " (" + sliderName.textContent + ")";
+
 if (sliderName.textContent.length > 16) {
     const textWrap = document.createElement("span");
     textWrap.className = "text-wrap";
-    textWrap.innerHTML = sliderName.textContent + "   " + sliderName.textContent;  
+    textWrap.innerHTML = sliderName.textContent + "   " + sliderName.textContent;
     sliderName.innerHTML = "";
-    sliderName.append(textWrap);        
+    sliderName.append(textWrap);
 }
 if (sliderTitle.textContent.length >= 18) {
     const textWrap = document.createElement("span");
